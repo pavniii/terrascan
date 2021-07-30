@@ -1,9 +1,8 @@
 package accurics
 
-{{.prefix}}{{.name}}{{.suffix}}[apt]{
+{{.prefix}}{{.name}}{{.suffix}}[apt.id]{
 	apt := input.workdir[_]
-	conval := apt.config
+	path := apt.config
     
-    not regex.match("(^/[A-z0-9-_+]*)|(^[A-z0-9-_+]:\\\\.*)|(^\\$[{}A-z0-9-_+].*)", conval)
-    
+	not re_match("(^/[[A-z0-9-_+]*)|(^[A-z0-9-_+]:\\\\.*)|(^\\$[{}A-z0-9-_+].*)", path)
 }
