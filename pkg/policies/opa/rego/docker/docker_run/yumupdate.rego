@@ -4,5 +4,4 @@ package accurics
     run := input.run[_]
 	config := run.config
     contains(config, ["yum update", "yum update-to", "yum upgrade", "yum upgrade-to"][_])
-
 }
