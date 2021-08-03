@@ -1,7 +1,23 @@
 package accurics
 
-{{.prefix}}{{.name}}{{.suffix}}[run.id]{
-	run := input.add[_]
-    config := run.config
-    re_match("https?", config)
+{{.prefix}}{{.name}}{{.suffix}}[add.id]{
+	add := input.add[_]
+    is_string(add.config)
+    config := add.config
+    checkWget(config)
 }
+
+{{.prefix}}{{.name}}{{.suffix}}[add.id] {
+    add := input.add[_]
+    is_array(add.config)
+    config := add.config
+    checkWgetList(config)
+}
+
+checkWget(config) {
+   re_match("https?", config)
+}
+
+ checkWgetList(config) {
+     re_match("https?", config)
+ }

@@ -9,7 +9,7 @@
         "name": "runusingupgrade"
     },
     "severity": "HIGH",
-    "description": "Ensure that use of Commands 'apt-get upgrade' and 'apt-get dist-upgrade' should not be used",
+    "description": "Ensure that Commands 'apt-get upgrade' and 'apt-get dist-upgrade' are not being used",
     "reference_id": "AC_DOCKER_0052",
     "category": "Infrastructure Security",
     "id": "AC_DOCKER_0052",
